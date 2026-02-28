@@ -4,6 +4,8 @@ metadata:
   name: harness-nginx-deployment
 spec:
   replicas: 2
+  strategy:
+    type: Recreate  
   selector:
     matchLabels:
       app: harness-nginx
