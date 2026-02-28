@@ -3,3 +3,23 @@ service:
   identifier: dattaservicek8s
   orgIdentifier: default
   projectIdentifier: DattaK8sGitOpsDemo
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: k8sdeploymentsimple
+            type: K8sManifest
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: dattagithubconnector
+                  gitFetchType: Branch
+                  paths:
+                    - deployment-nginx.yaml
+                    - service-nginx.yaml
+                  branch: main
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+              optionalValuesYaml: false
+    type: Kubernetes
