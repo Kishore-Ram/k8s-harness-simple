@@ -1,0 +1,5 @@
+service:
+  name: datta-service-k8s
+  identifier: dattaservicek8s
+  orgIdentifier: default
+  projectIdentifier: DattaK8sGitOpsDemo
