@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: datta-k8s-infra
+  identifier: dattak8sinfra
+  orgIdentifier: default
+  projectIdentifier: DattaK8sGitOpsDemo
+  environmentRef: pock8s1_32
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: dattakubernetesconnector
+    namespace: default
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
