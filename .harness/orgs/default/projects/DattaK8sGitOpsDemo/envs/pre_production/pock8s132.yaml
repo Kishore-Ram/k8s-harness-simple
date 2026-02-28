@@ -1,0 +1,6 @@
+environment:
+  name: poc-k8s-1_32
+  identifier: pock8s1_32
+  orgIdentifier: default
+  projectIdentifier: DattaK8sGitOpsDemo
+  type: PreProduction
